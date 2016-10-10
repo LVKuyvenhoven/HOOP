@@ -20,11 +20,7 @@ Particle::Particle(int startX, int startY) {
 }
 
 void Particle::update() {
-	for (int i = 0; i < lifetime; ++i) {
-		if (i > lifetime) {
-
-		}
-	}
+	lifetime++;
 }
 
 void Particle::setColours(ofColor center, ofColor inner, ofColor outer) {
@@ -34,11 +30,9 @@ void Particle::setColours(ofColor center, ofColor inner, ofColor outer) {
 }
 
 void Particle::move() {
-	for (int j = 0; j < lifetime; ++j) {
-		position += speed;
-		spin.rotate(10);
-		position += spin;
-	}
+	position += speed;
+	spin.rotate(10);
+	position += spin;
 }
 
 void Particle::draw() {
@@ -50,4 +44,8 @@ void Particle::draw() {
 
 	ofSetColor(centerColour);
 	ofDrawCircle(position.x, position.y, radius * 0.25);
+}
+
+bool Particle::isDead() {
+	return lifetime > MAX_LIFETIME;
 }
