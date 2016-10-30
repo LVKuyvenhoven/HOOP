@@ -6,6 +6,8 @@
 
 #include "Emitter.h"
 
+#include "ParticleReaper.h"
+
 class ofApp : public ofBaseApp {
 
 public:
@@ -18,4 +20,5 @@ public:
 	Emitter emit1;
 	Emitter emit2;
 	Emitter emit3;
+	ParticleReaper reaper;
 };

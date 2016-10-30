@@ -16,7 +16,7 @@ Particle::Particle(int startX, int startY) {
 	spin = ofVec2f(ofRandom(-5, 5),
 		ofRandom(-5, 5));
 
-	lifetime = 100;
+	lifetime = 0;
 }
 
 void Particle::update() {

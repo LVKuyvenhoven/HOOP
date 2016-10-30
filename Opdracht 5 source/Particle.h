@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 
-#define MAX_LIFETIME 150
+#define MAX_LIFETIME 200
 
 class Particle {
 public:
